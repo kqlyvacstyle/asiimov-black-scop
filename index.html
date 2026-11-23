@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="kqlyvacstyle — каталог проектов и визуальных экспериментов.">
+<meta name="theme-color" content="#101313">
+<title>kqlyvacstyle — проекты</title>
+<style>
+:root{color-scheme:dark;--base:#101313;--line:#303737;--text:#f2f5ec;--muted:#b2bdb6;--acid:#dbff70}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--acid);outline-offset:6px}
+.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+header,.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px}
+header{border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:-.03em}
+.logo::before{content:"";width:11px;height:11px;background:var(--acid);transform:rotate(45deg)}
+nav{display:flex;gap:clamp(14px,4vw,40px);color:var(--muted)}
+nav a:hover,.foot a:hover{color:var(--acid)}
+.hero{position:relative;isolation:isolate;overflow:hidden;display:grid;align-content:center;min-height:570px;padding:56px 0 64px}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;pointer-events:none}
+.hero::before{inset:0;background:linear-gradient(90deg,var(--base) 8%,transparent 90%),repeating-linear-gradient(90deg,transparent 0 47px,#263030 48px),repeating-linear-gradient(0deg,transparent 0 47px,#263030 48px);mask-image:linear-gradient(transparent,#000 24%,#000 78%,transparent)}
+.hero::after{width:min(46%,490px);aspect-ratio:1;right:1%;top:50%;translate:0 -50%;rotate:-18deg;border-radius:50%;background:repeating-radial-gradient(ellipse at center,transparent 0 9px,#cdff69 10px 11px,transparent 12px 19px);mask-image:linear-gradient(135deg,transparent,#000 80%);opacity:.65}
+.kicker{color:var(--acid);font:700 .875rem/1.4 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3,p{margin:0}
+h1{font-size:clamp(3rem,9vw,7.4rem);line-height:.92;letter-spacing:-.085em;margin:20px 0 24px}
+h1 span{color:var(--acid)}
+.intro{max-width:31ch;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem)}
+.button{display:inline-block;width:fit-content;margin-top:28px;padding:12px 19px;border-radius:7px;color:#182008;background:var(--acid);font-weight:750}
+.button:hover{background:#eeffb6}
+section{border-top:1px solid var(--line);padding-block:46px}
+h2{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.06em;line-height:1.1;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{display:block;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#171c1b;transition:border-color .2s}
+.card:hover{border-color:var(--acid)}
+.art{height:clamp(125px,23vw,255px);display:grid;place-items:center;overflow:hidden}
+.art i{display:block;width:38%;aspect-ratio:1}
+.art-a{background:#272b28}
+.art-a i{transform:rotate(-25deg);border-radius:25%;background:repeating-linear-gradient(120deg,#ff9b56 0 9px,#292d27 10px 22px);box-shadow:16px 15px 0 #161b16}
+.art-b{background:#263325}
+.art-b i{transform:rotate(45deg);background:repeating-linear-gradient(90deg,#b9e873 0 2px,transparent 2px 12px);border:2px solid #b9e873}
+.copy{padding:20px;overflow-wrap:anywhere}
+h3{font-size:clamp(1.1rem,3vw,1.5rem);line-height:1.2;letter-spacing:-.035em}
+.copy p,.foot{color:var(--muted)}
+.copy p{margin-top:8px}
+.foot{border-top:1px solid var(--line)}
+@media(max-width:600px){.wrap{width:calc(100% - 32px)}.hero{min-height:465px}.hero::after{width:70%;right:-20%;opacity:.35}.cards{grid-template-columns:1fr}section{padding-block:36px}.art{height:160px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="logo" href="#top">kqlyvacstyle</a>
+<nav aria-label="Основное меню"><a href="#projects">Проекты</a><a href="https://github.com/kqlyvacstyle">GitHub</a></nav>
+</header>
+<main id="top">
+<div class="hero">
+<p class="kicker">Портфолио</p>
+<h1>Проекты<br><span>и эксперименты.</span></h1>
+<p class="intro">Работы и учебные проекты из моего GitHub.</p>
+<a class="button" href="#projects">Смотреть проекты</a>
+</div>
+<section id="projects" aria-labelledby="project-title">
+<h2 id="project-title">На GitHub</h2>
+<div class="cards">
+<a class="card" href="https://github.com/kqlyvacstyle/asiimov-black-scop">
+<div class="art art-a" aria-hidden="true"><i></i></div>
+<div class="copy"><h3>Asiimov Black Scop</h3><p>Открыть репозиторий</p></div>
+</a>
+<a class="card" href="https://github.com/kqlyvacstyle/USPESHNAYA-KURSOVAYA">
+<div class="art art-b" aria-hidden="true"><i></i></div>
+<div class="copy"><h3>Успешная курсовая</h3><p>Открыть репозиторий</p></div>
+</a>
+</div>
+</section>
+</main>
+<footer class="foot"><span>kqlyvacstyle</span><a href="#top">Наверх</a></footer>
+</div>
+</body>
+</html>
